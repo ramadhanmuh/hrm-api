@@ -8,7 +8,7 @@ namespace Src\Configurations;
 class Database
 {
     public static $config = [
-        'host' => 'localhos',
+        'host' => 'localhost',
         'username' => 'root',
         'password' => '',
         'databaseName' => 'hrm_api'
