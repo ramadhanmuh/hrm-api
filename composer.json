@@ -1,0 +1,9 @@
+{
+    "name": "ramadhanmuh/hrm-api-php8",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    }
+}
