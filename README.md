@@ -1,11 +1,12 @@
 ## HRM (Human Resource Management) API
 
-Aplikasi HRM adalah sebuah aplikasi untuk mengelola data karyawan dari mulai saat telah bergabung ke perusahaan sampai saat keluar dari perusahaan. Di aplikasi ini, tugasnya untuk komunikasi antara tampilan dengan basis data. Pemakai dari aplikasi ini adalah orang-orang yang berhak mengakses data karyawan suatu perusahaan.
+Aplikasi HRM adalah sebuah aplikasi untuk mengelola data karyawan dari mulai saat telah bergabung ke perusahaan sampai saat keluar dari perusahaan. Di aplikasi ini, tugasnya untuk komunikasi antara suatu perangkat dengan basis data. Pemakai dari aplikasi ini adalah orang-orang yang berhak mengakses data karyawan suatu perusahaan.
 
 ## Spesifikasi Dibuat
 1. Bahasa Pemrograman PHP versi 8
 2. MySQL versi 5.5
 3. Server Apache
+4. Protokol SMTP
 
 ## Modul-Modul
 1. Aplikasi
@@ -114,6 +115,14 @@ Aplikasi HRM adalah sebuah aplikasi untuk mengelola data karyawan dari mulai saa
     - Menghapus
 
 15. Penghentian
+    - Membuat
+    - Mendapatkan
+    - Menghitung
+    - Mendapatkan Satu
+    - Mengubah
+    - Menghapus
+
+16. Riwayat Pekerjaan
     - Membuat
     - Mendapatkan
     - Menghitung
