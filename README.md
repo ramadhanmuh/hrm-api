@@ -8,17 +8,11 @@ Aplikasi HRM adalah sebuah aplikasi untuk mengelola data karyawan dari mulai saa
 3. Server Apache
 
 ## Modul-Modul
-1. Profil
-    - Mendapatkan
-    - Mengubah
-    - Ubah Kata Sandi
-    - Hapus Akun
-
-2. Aplikasi
+1. Aplikasi
     - Mendapatkan
     - Mengubah
 
-3. Pengguna
+2. Pengguna
     - Membuat
     - Mendapatkan
     - Menghitung
@@ -28,6 +22,12 @@ Aplikasi HRM adalah sebuah aplikasi untuk mengelola data karyawan dari mulai saa
     - Masuk
     - Lupa Kata Sandi
     - Pengaturan Ulang Kata Sandi
+
+3. Profil
+    - Mendapatkan
+    - Mengubah
+    - Ubah Kata Sandi
+    - Hapus Akun
 
 4. Cabang
     - Membuat
