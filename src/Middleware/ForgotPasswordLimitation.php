@@ -6,7 +6,7 @@ use Src\Helpers\ResponseHelper;
 use Src\Helpers\StringHelper;
 use Src\Systems\Middleware;
 
-class LoginLimitation extends Middleware
+class ForgotPasswordLimitation extends Middleware
 {
     function run() {
         $ipAddress = getenv('REMOTE_ADDR');
@@ -15,7 +15,7 @@ class LoginLimitation extends Middleware
             return ResponseHelper::createForbidden('Layanan membutuhkan Alamat IP.');
         }
 
-        $filePath = './src/Storage/LoginLimitation/' . StringHelper::specialCharacterToStripe($ipAddress);
+        $filePath = './src/Storage/ForgotPasswordLimitation/' . StringHelper::specialCharacterToStripe($ipAddress);
 
         if (file_exists($filePath)) {
             // Untuk membaca data dari berkas cache
@@ -26,8 +26,8 @@ class LoginLimitation extends Middleware
 
             $now = time();
 
-            // Jika pengguna masih melakukan permintaan kurang dari 6 kali
-            if ($cachedData['total'] < 6) {
+            // Jika pengguna masih melakukan permintaan kurang dari 4 kali
+            if ($cachedData['total'] < 4) {
                 // Jika masih belum waktu kadaluarsa
                 if ($cachedData['expiredAt'] > $now) {
                     $cachedData['total']++;

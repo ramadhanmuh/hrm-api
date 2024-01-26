@@ -3,7 +3,9 @@
 namespace Src\Routes;
 
 use Src\Controllers\AuthController;
+use Src\Controllers\ForgotPasswordController;
 use Src\Controllers\UserController;
+use Src\Middleware\ForgotPasswordLimitation;
 use Src\Middleware\LoginLimitation;
 
 class Users
@@ -18,6 +20,15 @@ class Users
                 'function' => 'authenticate',
                 'middleware' => [
                     LoginLimitation::class
+                ]
+            ],
+            [
+                'path' => 'forgot-password',
+                'method' => 'POST',
+                'controller' => ForgotPasswordController::class,
+                'function' => 'send',
+                'middleware' => [
+                    ForgotPasswordLimitation::class
                 ]
             ],
             [
