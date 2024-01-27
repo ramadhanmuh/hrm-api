@@ -26,8 +26,10 @@ class ForgotPasswordLimitation extends Middleware
 
             $now = time();
 
-            // Jika pengguna masih melakukan permintaan kurang dari 4 kali
-            if ($cachedData['total'] < 4) {
+            // var_dump($cachedData);die;
+
+            // Jika pengguna masih melakukan permintaan kurang dari 3 kali
+            if ($cachedData['total'] < 3) {
                 // Jika masih belum waktu kadaluarsa
                 if ($cachedData['expiredAt'] > $now) {
                     $cachedData['total']++;

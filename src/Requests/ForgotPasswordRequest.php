@@ -35,7 +35,7 @@ class ForgotPasswordRequest
 
         if ($status['email'] === true) {
             $this->user = User::getOneByColumn(
-                User::$table, 'name, status', 'email',
+                User::$table, 'id, name, status', 'email',
                 $this->input['email']
             );
 

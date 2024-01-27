@@ -1,6 +1,8 @@
 {
     "name": "ramadhanmuh/hrm-api-php8",
-    "require": {},
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    },
     "autoload": {
         "psr-4": {
             "Src\\": "src/"

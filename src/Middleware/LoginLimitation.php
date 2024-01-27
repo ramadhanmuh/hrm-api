@@ -26,8 +26,8 @@ class LoginLimitation extends Middleware
 
             $now = time();
 
-            // Jika pengguna masih melakukan permintaan kurang dari 6 kali
-            if ($cachedData['total'] < 6) {
+            // Jika pengguna masih melakukan permintaan kurang dari 5 kali
+            if ($cachedData['total'] < 5) {
                 // Jika masih belum waktu kadaluarsa
                 if ($cachedData['expiredAt'] > $now) {
                     $cachedData['total']++;

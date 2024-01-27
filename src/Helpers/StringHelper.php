@@ -19,15 +19,15 @@ class StringHelper
         return $hash;
     }
 
-    public static function createToken() {
-        // Membuat string unik sepanjang 32 karakter
+    public static function createToken($length = 32) {
+        // Membuat string unik sepanjang $length karakter
         $uniqueString = md5(uniqid(mt_rand(), true));
 
-        // Pastikan panjang string adalah 32 karakter
-        if (strlen($uniqueString) < 32) {
-            $uniqueString = str_pad($uniqueString, 32, '0', STR_PAD_RIGHT);
-        } elseif (strlen($uniqueString) > 32) {
-            $uniqueString = substr($uniqueString, 0, 32);
+        // Pastikan panjang string adalah $length karakter
+        if (strlen($uniqueString) < $length) {
+            $uniqueString = str_pad($uniqueString, $length, '0', STR_PAD_RIGHT);
+        } elseif (strlen($uniqueString) > $length) {
+            $uniqueString = substr($uniqueString, 0, $length);
         }
 
         return $uniqueString;
